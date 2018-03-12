@@ -28,7 +28,7 @@ Keyboard.print("iexplore -k http://fakeupdate.net/win10u/index.html");
 delay(500);
 typeKey(KEY_RETURN);
 
-
+Keyboard.end();
 
 }
 
