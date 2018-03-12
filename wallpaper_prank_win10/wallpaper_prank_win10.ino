@@ -28,7 +28,7 @@ void typeKey(uint8_t key)
 void setup()
 {
 
-delay(5000); //delay to wait installation of device
+delay(10000); //delay to wait installation of device
   pinMode(2,INPUT);
 
 if (digitalRead(2)==LOW)
@@ -37,24 +37,33 @@ if (digitalRead(2)==LOW)
 
 Keyboard.begin();
 
-  // Wait 500ms
-  delay(500);
-
+  // Wait 1000ms
   delay(1000);
 
+//desactivate Display switch
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  Keyboard.releaseAll();
+
+  delay(1000);
+  Keyboard.print("DisplaySwitch.exe /internal");
+  delay(500);
+  typeKey(KEY_RETURN);
+
 //Goto Desktop
+  delay(5000);
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('d');
   Keyboard.releaseAll();
 
 //run execut commant (Win + r)
-  delay(500);
+  delay(1000);
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('r');
   Keyboard.releaseAll();
 
 //run SnippingTool
-  delay(500);
+  delay(1000);
   Keyboard.print("SnippingTool");
   typeKey(KEY_RETURN);
   
@@ -65,7 +74,7 @@ Keyboard.begin();
   Keyboard.releaseAll();
 
 //make printscreen
-  delay(500);
+  delay(1000);
   typeKey(KEY_DOWN_ARROW);
   typeKey(KEY_DOWN_ARROW);
   typeKey(KEY_DOWN_ARROW);
@@ -73,30 +82,30 @@ Keyboard.begin();
   typeKey(KEY_RETURN);
 
 //copy printscreen
-  delay(500);
+  delay(1000);
   Keyboard.press(KEY_LEFT_CTRL);
   Keyboard.press('c');
   Keyboard.releaseAll();
 
 //Close Snipping Tool
-  delay(500);
+  delay(1000);
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press(KEY_F4);
   Keyboard.releaseAll();
 
 //no save picture
-  delay(500);
+  delay(1000);
   typeKey(KEY_RIGHT_ARROW);
   typeKey(KEY_RETURN);
 
 //launch execute command (win+r)
-  delay(500);
+  delay(1000);
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('r');
   Keyboard.releaseAll();
 
 //launch mspaint
-  delay(500);
+  delay(1000);
   Keyboard.print("mspaint");
   typeKey(KEY_RETURN);
 
@@ -108,7 +117,7 @@ Keyboard.begin();
   Keyboard.releaseAll();
 
 //save picture before make wallpaper
-  delay(700);
+  delay(1000);
   Keyboard.press(KEY_LEFT_CTRL);
   Keyboard.press('s');
   Keyboard.releaseAll();
@@ -122,13 +131,13 @@ Keyboard.begin();
 
 //set picture as wallpaper
 //open file menu
-  delay(700);
+  delay(1000);
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press('f');
   Keyboard.releaseAll();
 
 //select set as wallpaper
-  delay(500);
+  delay(1000);
   typeKey('b');
 
 //close paint
@@ -141,17 +150,17 @@ Keyboard.begin();
 //remove picture
 //start cmd.exe
 
-  delay(500);
+  delay(1000);
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('r');
   Keyboard.releaseAll();
 
-  delay(500);
+  delay(1000);
   Keyboard.print("cmd");
   typeKey(KEY_RETURN);
 
 //remove file
-  delay(500);
+  delay(1000);
   Keyboard.print("DEL ");
   Keyboard.print("%userprofile%");
   backslash();
@@ -159,22 +168,22 @@ Keyboard.begin();
   typeKey(KEY_RETURN);
 
 //exit cmd
-  delay(500);
+  delay(1000);
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press(KEY_F4);
   Keyboard.releaseAll();
 
 //goto desktop
-  delay(500);
+  delay(1000);
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('d');
   Keyboard.releaseAll();
 
 //stop Keyboard and begin mouse
   Keyboard.end();
-  delay(500);
+  delay(1000);
   Mouse.begin();
-  delay(500);
+  delay(1000);
 //go up the screen
   Mouse.move(0, char(1000));
   Mouse.move(0, char(1000));
@@ -201,9 +210,9 @@ Keyboard.begin();
   Mouse.end();
 
 //begin Keyboard
-  delay(500);
+  delay(1000);
   Keyboard.begin();
-  delay(500);
+  delay(1000);
 
 //choose disable icon in desktop
   typeKey(KEY_DOWN_ARROW);
