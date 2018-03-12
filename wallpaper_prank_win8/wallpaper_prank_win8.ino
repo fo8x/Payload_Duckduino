@@ -217,8 +217,6 @@ Keyboard.begin();
 //choose disable icon in desktop
   typeKey(KEY_DOWN_ARROW);
   delay(100);
-  typeKey(KEY_DOWN_ARROW);
-  delay(100);
   typeKey(KEY_RIGHT_ARROW);
   delay(100);
   typeKey(KEY_UP_ARROW);
