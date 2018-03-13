@@ -23,6 +23,17 @@ Keyboard.press(KEY_LEFT_GUI);
 Keyboard.press('r');
 Keyboard.releaseAll();
 
+delay(1000);
+
+Keyboard.print("DisplaySwitch.exe /internal");
+delay(500);
+typeKey(KEY_RETURN);
+delay(5000);
+
+Keyboard.press(KEY_LEFT_GUI);
+Keyboard.press('r');
+Keyboard.releaseAll();
+
 delay(500);
 Keyboard.print("iexplore -k http://fakeupdate.net/win10u/index.html");
 delay(500);
