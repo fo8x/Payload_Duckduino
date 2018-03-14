@@ -45,7 +45,7 @@ Keyboard.begin();
   Keyboard.press('r');
   Keyboard.releaseAll();
 
-  delay(1000);
+  delay(1500);
   Keyboard.print("DisplaySwitch.exe /internal");
   delay(500);
   typeKey(KEY_RETURN);
@@ -63,18 +63,18 @@ Keyboard.begin();
   Keyboard.releaseAll();
 
 //run SnippingTool
-  delay(1000);
+  delay(1500);
   Keyboard.print("SnippingTool");
   typeKey(KEY_RETURN);
   
 //mode printscreen
-  delay(1000);
+  delay(3000);
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press('m');
   Keyboard.releaseAll();
 
 //make printscreen
-  delay(1000);
+  delay(1500);
   typeKey(KEY_DOWN_ARROW);
   typeKey(KEY_DOWN_ARROW);
   typeKey(KEY_DOWN_ARROW);
@@ -88,13 +88,13 @@ Keyboard.begin();
   Keyboard.releaseAll();
 
 //Close Snipping Tool
-  delay(1000);
+  delay(1500);
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press(KEY_F4);
   Keyboard.releaseAll();
 
 //no save picture
-  delay(1000);
+  delay(1500);
   typeKey(KEY_RIGHT_ARROW);
   typeKey(KEY_RETURN);
 
@@ -105,25 +105,25 @@ Keyboard.begin();
   Keyboard.releaseAll();
 
 //launch mspaint
-  delay(1000);
+  delay(1500);
   Keyboard.print("mspaint");
   typeKey(KEY_RETURN);
 
 //paste picture in paint
 
-  delay(2000);
+  delay(3000);
   Keyboard.press(KEY_LEFT_CTRL);
   Keyboard.press('v');
   Keyboard.releaseAll();
 
 //save picture before make wallpaper
-  delay(1000);
+  delay(1500);
   Keyboard.press(KEY_LEFT_CTRL);
   Keyboard.press('s');
   Keyboard.releaseAll();
 
 //rename picture before save
-  delay(1000);
+  delay(1500);
   Keyboard.print("%userprofile%");
   backslash();
   Keyboard.print("prank.bmp");
@@ -131,18 +131,18 @@ Keyboard.begin();
 
 //set picture as wallpaper
 //open file menu
-  delay(1000);
+  delay(1500);
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press('f');
   Keyboard.releaseAll();
 
 //select set as wallpaper
-  delay(1000);
+  delay(1500);
   typeKey('b');
 
 //close paint
 
-  delay(1000);
+  delay(1500);
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press(KEY_F4);
   Keyboard.releaseAll();
@@ -155,7 +155,7 @@ Keyboard.begin();
   Keyboard.press('r');
   Keyboard.releaseAll();
 
-  delay(1000);
+  delay(1500);
   Keyboard.print("cmd");
   typeKey(KEY_RETURN);
 
@@ -168,13 +168,13 @@ Keyboard.begin();
   typeKey(KEY_RETURN);
 
 //exit cmd
-  delay(1000);
+  delay(1500);
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press(KEY_F4);
   Keyboard.releaseAll();
 
 //goto desktop
-  delay(1000);
+  delay(1500);
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('d');
   Keyboard.releaseAll();
@@ -204,13 +204,13 @@ Keyboard.begin();
 
 
 //mouse RIGHT click
-  delay(100);
+  delay(1000);
   Mouse.click(MOUSE_RIGHT);
   delay(100);
   Mouse.end();
 
 //begin Keyboard
-  delay(1000);
+  delay(2000);
   Keyboard.begin();
   delay(1000);
 
